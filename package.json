@@ -2,7 +2,7 @@
   "$schema": "https://www.raycast.com/schemas/extension.json",
   "name": "screenocr",
   "title": "ScreenOCR",
-  "description": "ScreenOCR allows you to quickly and easily extract text from screen captures, perfect for extracting text from any on-screen content.",
+  "description": "ScreenOCR allows you to quickly and easily extract text from screen captures, perfect for extracting text from any on-screen content. All processing is done locally on device.",
   "icon": "command-icon.png",
   "author": "joshua46",
   "categories": [
