@@ -65,6 +65,7 @@ func main() -> Int32 {
     request.recognitionLevel = MODE
     request.usesLanguageCorrection = USE_LANG_CORRECTION
     request.revision = REVISION
+    request.recognitionLanguages = ["zh-Hans", "en"]
 
     try? VNImageRequestHandler(cgImage: capturedImage, options: [:]).perform([request])
 
