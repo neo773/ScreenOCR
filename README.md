@@ -5,6 +5,9 @@ All processing is done locally on device via Apple's VisionKit ML API.
 
 **Note**: This extension requires "Screen Recording" permission to work (it's the only way to capture screenshots)
 
+![screenshot](https://raw.githubusercontent.com/raycast/extensions/3b921771e66f79e696f09490a7e91918fe1718c5/extensions/screenocr/metadata/screenocr-1.png)
+
+![screenshot](https://raw.githubusercontent.com/raycast/extensions/3b921771e66f79e696f09490a7e91918fe1718c5/extensions/screenocr/metadata/screenocr-2.png)
 
 If you find ScreenOCR helpful, feel free to buy me a coffee 
 
