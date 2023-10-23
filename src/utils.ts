@@ -37,8 +37,6 @@ const recognizeText = async (isFullScreen = false) => {
     }
 
     args.push("--languages");
-    console.log(languages.map((lang) => lang.value).join(" "));
-
     args.push(languages.map((lang) => lang.value).join(" "));
 
     const { stdout } = await execa(command, args);
