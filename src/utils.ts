@@ -26,7 +26,19 @@ const recognizeText = async (isFullScreen = false) => {
       args.push("--fast");
     }
 
+    if (preference.ignoreLineBreaks) {
+      args.push("--ignorelinebreaks");
+    }
+
+    if (preference.customWordsList) {
+      console.log(preference.customWordsList);
+
+      args.push("--customwordslist", preference.customWordsList);
+    }
+
     args.push("--languages");
+    console.log(languages.map((lang) => lang.value).join(" "));
+
     args.push(languages.map((lang) => lang.value).join(" "));
 
     const { stdout } = await execa(command, args);
