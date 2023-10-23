@@ -31,8 +31,6 @@ const recognizeText = async (isFullScreen = false) => {
     }
 
     if (preference.customWordsList) {
-      console.log(preference.customWordsList);
-
       args.push("--customwordslist", preference.customWordsList);
     }
 
