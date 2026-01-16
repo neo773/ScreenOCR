@@ -86,7 +86,10 @@ export const LanguagesManagerList = () => {
     setSelectedLanguages((draft) => {
       draft.push(language);
     });
-    const payload = [...selectedLanguages, language];
+    const selectedLanguagesWithoutPrimary = selectedLanguages.filter(
+      (lang) => lang.value !== preference.primaryLanguage
+    );
+    const payload = [...selectedLanguagesWithoutPrimary, language];
     LocalStorage.setItem("SelectedLanguages", JSON.stringify(payload));
     showToast(Toast.Style.Success, "Language set was saved!");
   };
@@ -103,7 +106,10 @@ export const LanguagesManagerList = () => {
     const updatedLanguages = selectedLanguages.filter(
       (lang) => lang.value !== language.value,
     );
-    LocalStorage.setItem("SelectedLanguages", JSON.stringify(updatedLanguages));
+    const updatedLanguagesWithoutPrimary = updatedLanguages.filter(
+      (lang) => lang.value !== preference.primaryLanguage
+    );
+    LocalStorage.setItem("SelectedLanguages", JSON.stringify(updatedLanguagesWithoutPrimary));
   };
 
   useEffect(() => {

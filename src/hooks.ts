@@ -27,9 +27,8 @@ export const getUserSelectedLanguages = async () => {
       selectedLanguages as unknown as string,
     ) as Language[];
     userSelectedLanguages = selectedLanguagesParsed;
-    return userSelectedLanguages;
   }
 
-  const languages: Language[] = [primaryLanguage];
+  const languages: Language[] = [...userSelectedLanguages, primaryLanguage];
   return languages;
 };
